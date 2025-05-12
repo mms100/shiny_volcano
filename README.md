@@ -3,6 +3,11 @@ This app makes volcano plots from DEGs tables and lets you tweak them interactiv
 
 **#prerequisite packages to be installed in R studio**
 
+# Install CRAN packages
 install.packages(c("shiny", "DT", "plotly"))
-if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+
+# Install Bioconductor and EnhancedVolcano if not already installed
+if (!requireNamespace("BiocManager", quietly = TRUE)) {
+  install.packages("BiocManager")
+}
 BiocManager::install("EnhancedVolcano")
