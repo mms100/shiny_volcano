@@ -108,9 +108,11 @@ server <- function(input, output, session) {
       selectLab = genes_to_label_final(),
       pCutoff = input$pval,
       FCcutoff = input$logfc,
-      pointSize = 2.5,
-      labSize = 5,
-      drawConnectors = TRUE, arrowheads =F,
+      pointSize = 1.5,
+      labSize = 4,
+      legendLabSize = 7,
+      drawConnectors = TRUE, 
+      arrowheads =F,
       max.overlaps = Inf
     )
     if (!is.null(xlim)) args$xlim <- xlim
@@ -135,9 +137,11 @@ server <- function(input, output, session) {
         selectLab = genes_to_label_final(),
         pCutoff = input$pval,
         FCcutoff = input$logfc,
-        pointSize = 2.5,
-        labSize = 5,
-        drawConnectors = TRUE,arrowheads =F,
+        pointSize = 1.5,
+        labSize = 4,
+        legendLabSize = 7,
+        drawConnectors = TRUE,
+        arrowheads =F,
         max.overlaps = Inf
       )
       if (!is.null(xlim)) args$xlim <- xlim
