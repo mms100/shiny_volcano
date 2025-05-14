@@ -143,9 +143,10 @@ server <- function(input, output, session) {
       if (!is.null(xlim)) args$xlim <- xlim
       if (!is.null(ylim)) args$ylim <- ylim
       
-      pdf(file, width = 6, height = 6)
-      do.call(EnhancedVolcano, args)
-      dev.off()
+     grDevices::pdf(file, width = 6, height = 6)
+     on.exit(grDevices::dev.off())
+     volcano_plot <- do.call(EnhancedVolcano, args)
+     print(volcano_plot)
     }
   )
   
